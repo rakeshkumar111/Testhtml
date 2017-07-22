@@ -1,0 +1,18 @@
+h1 {
+    color:red;
+}
+
+.required {
+    color:red;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 22px;
+}
+.full {
+    width:100%;
+}
+.bg {
+    background-color: blue;
+}

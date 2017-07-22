@@ -1,0 +1,23 @@
+<div class="flex">
+    <div class="flex-auto">
+        <div *ngFor="let prod of products">
+            <!--{{prod.name}}
+        <button (click)="pushToCart(prod)">Add to cart</button>-->
+
+            <!-- a child component to display product details-->
+
+            <app-product-detail [mode]="1" [product]="prod" (onAddToCart)="pushToCart($event)"></app-product-detail>
+
+
+            <!--<button (click)="pushToCart(prod)">Add To Cart</button>-->
+
+        </div>
+    </div>
+    <div>
+        Total {{cart.length}} products in your cart.
+        <button *ngIf="cart.length">View Cart</button>
+        <div *ngFor="let c of cart">
+             <app-product-detail [mode]="2" [product]="c" (onAddToCart)="pushToCart($event)"></app-product-detail>
+        </div>
+    </div>
+</div>
